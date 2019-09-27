@@ -1,0 +1,39 @@
+<html>
+	<head>
+		<title>Weather</title>
+        <script src="./weatherView.js"></script>
+	</head>
+	<body onload="reqStatCity()">
+        <div id="avgAndHot"></div><br>
+        <div id="err"></div><br>
+        <div id="ddMenu"><br>
+            <select id="menu" onchange="reqDynCity()">
+                <option>New York</option>
+                <option>London</option>
+                <option>Moscow</option>
+                <option>Sydney</option>
+                <option>Tokyo</option>
+                <option>ASDDFEAGDSDFSDAF</option>
+            </select>
+        </div>
+        <div id="cityInfo"><br>
+            <table id="weatherTable">
+                <tr>
+                    <th>City</th>
+                    <th>Forecast</th>
+                    <th>Local Time</th>
+                    <th>Temp.</th>
+                    <th>Feels Like</th>
+                    <th>Wind Speed</th>
+                    <th>Visibility</th>
+                </tr>
+                <tr id="statCity"></tr>
+                <tr id="dynCity"></tr>
+            </table>
+        </div>
+        <div id="refresh">
+            <input type='submit' value='Refresh' onclick='refresh()'/>
+        </div><br>
+        <div id="forcast"></div><br>
+	</body>
+</html>
